@@ -1,3 +1,4 @@
+
 # Login & Signup API
 
 A simple **Node.js** and **Express** backend project with **MongoDB** for handling user signup with password hashing using **bcryptjs** and rendering signup forms using **EJS**.
@@ -31,7 +32,6 @@ A simple **Node.js** and **Express** backend project with **MongoDB** for handli
 5. **Body Parsing Middleware**
 
    * Express middleware (`express.urlencoded` & `express.json`) used to parse incoming form and JSON data.
-
 
 ---
 
@@ -95,7 +95,9 @@ http://localhost:5000/signup
 
 ## Next Steps (Planned)
 
+* Add **OTP email verification**.
 * Add **user login** with JWT authentication.
 * Add **password reset** functionality.
-* Add **OTP email verification**.
+
+
 
