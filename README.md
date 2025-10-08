@@ -32,9 +32,11 @@ A simple **Node.js** and **Express** backend project with **MongoDB** for handli
 5. **Body Parsing Middleware**
 
    * Express middleware (`express.urlencoded` & `express.json`) used to parse incoming form and JSON data.
-
+6.  **Email verification using otp**
+   
+   *Email is verified now through mails .
 ---
-
+ 
 ## Project Structure
 
 ```
@@ -47,7 +49,7 @@ project/
 │   └── user.js        # User-related routes
 ├── views/
 │   └── signup.ejs     # Signup form template
-├── app.js             # Main server file
+├── index.js             # Main server file
 └── package.json       # Project dependencies
 ```
 
@@ -73,7 +75,7 @@ npm install
 4. Start the server:
 
 ```bash
-node app.js
+node index.js
 ```
 
 5. Open in browser:
@@ -93,11 +95,7 @@ http://localhost:5000/signup
 
 ---
 
-## Next Steps (Planned)
 
-* Add **OTP email verification**.
-* Add **user login** with JWT authentication.
-* Add **password reset** functionality.
 
 
 

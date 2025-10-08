@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
     name:{
         type: String,
-        required: true,
     }, 
     email:{
         type:String,
@@ -37,8 +36,7 @@ const TempUserSchema = new mongoose.Schema({
     otpexpires: {
         type: Date,
         required: true,
-       
-        expires: 0 
+       index: { expires: '5m' },
     },
 }, { timestamps: true });
 const User = mongoose.model("User", UserSchema);
