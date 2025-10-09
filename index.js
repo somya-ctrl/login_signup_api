@@ -17,16 +17,14 @@ app.set("views", path.join(__dirname, "views"));
 
 
 app.use("/", userRouter);
-
 app.get("/", (req, res) => {
   res.send("Server is working ");
 });
 mongoose
-  .connect("mongodb://127.0.0.1:27017/youtube-app-1")
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log(" MongoDB connected !");
     app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
   })
-  
   .catch((err) => console.error(" MongoDB error:", err));
 

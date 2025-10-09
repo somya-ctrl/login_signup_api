@@ -7,5 +7,5 @@ app.use(express.urlencoded({ extended: true })); // for form data
 router.get('/signup', (req, res) => res.render('signup'));
 router.post('/signup', handleUserSignup);
 router.post('/verify-otp', verifyotp);
-
+// router.post('/login',login);
 module.exports = router;
