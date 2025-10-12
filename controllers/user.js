@@ -1,6 +1,5 @@
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const validator = require('validator');
 const {User,TempUser}= require('../models/user');
 const { sendOtpEmail } = require('../mailer');
@@ -13,7 +12,7 @@ async function handleUserSignup(req, res) {
   try {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
-      return res.status(400).json({ message: 'All fields are required' });
+      return res.status(400).json({ message: 'All fields are required'  });
     }
 
     // Check if user already exists
